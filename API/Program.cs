@@ -8,6 +8,10 @@ using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Railway veya bulut ortamı için dinlenecek portu ayarla
+var port = Environment.GetEnvironmentVariable("PORT") ?? "5170";
+builder.WebHost.UseUrls($"http://*:{port}");
+
 // Database
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
