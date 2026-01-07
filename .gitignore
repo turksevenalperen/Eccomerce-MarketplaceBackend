@@ -1,0 +1,33 @@
+# .NET build outputs
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.db
+*.log
+
+# Visual Studio Code
+.vscode/
+
+# Environment and secrets
+.env*
+appsettings.*.json
+
+# Debug and crash logs
+*.pid
+*.psess
+*.vsp
+*.vspscc
+*.pdb
+
+# Others
+*.DS_Store
+Thumbs.db
+
+# Migrations
+Migrations/
+
+# SQL seed files
+seed.sql
